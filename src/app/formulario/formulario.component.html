@@ -1,0 +1,30 @@
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Formulario</h1>
+    <ol class="breadcrumb mb-4">
+    </ol>
+    <div class="card mb-4">
+    
+    </div>
+        <div class="col-md-9 offset-md-2">
+            <form #loginForm="ngForm" (submit)="onSubmit()" class="mt-4">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+                </div>
+                <br>
+
+                <button type="submit" (click)="onSubmit()" [disabled]="loginForm.form.invalid"
+                    class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+</div>
+<div class="container">
+
+</div>
